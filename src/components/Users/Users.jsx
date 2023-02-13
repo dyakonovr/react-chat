@@ -1,6 +1,6 @@
-import UsersHeader from '../UI/UsersHeader/UsersHeader';
+import UsersHeader from './UsersHeader/UsersHeader';
+import UsersList from './UsersList/UsersList';
 import classes from './Users.module.css'
-import UsersList from './../UI/UsersList/UsersList';
 
 function Users() {
   return (

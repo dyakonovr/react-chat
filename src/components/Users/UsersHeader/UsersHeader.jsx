@@ -1,4 +1,4 @@
-import SearchInput from '../SearchInput/SearchInput';
+import SearchInput from '../../UI/SearchInput/SearchInput';
 import classes from './UsersHeader.module.css'
 
 function UsersHeader() {

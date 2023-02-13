@@ -16,6 +16,7 @@ body {
   background-color: var(--color-secondary);
   color: var(--color-white);
   font-family: var(--font-family);
+  box-sizing: border-box;
 }
 
 #root {
@@ -24,4 +25,8 @@ body {
   text-align: center;
   background-color: var(--color-main);
   width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }

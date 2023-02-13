@@ -1,5 +1,5 @@
 import classes from './UsersList.module.css'
-import UserItem from './../UserItem/UserItem';
+import UserItem from './UserItem/UserItem';
 
 function UsersList() {
   return (
@@ -9,6 +9,17 @@ function UsersList() {
       <UserItem />
       <UserItem />
       <UserItem />
+      <UserItem />
+      <UserItem />
+      <UserItem />
+      <UserItem />
+      <UserItem />
+      <UserItem />
+      <UserItem />
+      <UserItem />
+      <UserItem />
+      <UserItem />
+      
     </ul>
   );
 };
