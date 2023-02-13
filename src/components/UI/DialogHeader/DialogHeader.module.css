@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  padding: 6px 10px 4px;
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.image img{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: block;
+}
+
+.name {
+  margin: 0 0 0 10px;
+}
