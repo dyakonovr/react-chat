@@ -1,4 +1,4 @@
-import classes from './Dialog.module.css';
+import classes from './Dialog.module.scss';
 import DialogHeader from './DialogHeader/DialogHeader';
 import DialogChat from './DialogChat/DialogChat';
 

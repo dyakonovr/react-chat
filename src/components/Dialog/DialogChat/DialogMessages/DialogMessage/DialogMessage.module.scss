@@ -1,0 +1,49 @@
+.message {
+  display: flex;
+  max-width: 70%;
+
+  &_left {
+    align-self: flex-start;
+
+    .wrapper {
+      align-items: baseline;
+      margin: 0 0 0 10px;
+      text-align: left;
+    }
+  }
+
+  &_right {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+
+    .wrapper {
+      align-items: end;
+      margin: 0 10px 0 0;
+      text-align: right;
+    }
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 20px;
+  }
+}
+
+.image img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.nickname {
+  margin: 0 0 10px;
+}
+
+.content {
+  margin: 0;
+}

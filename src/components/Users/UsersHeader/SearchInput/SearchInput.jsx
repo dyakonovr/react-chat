@@ -1,4 +1,4 @@
-import classes from './SearchInput.module.css'
+import classes from './SearchInput.module.scss'
 
 function SearchInput() {
   return (

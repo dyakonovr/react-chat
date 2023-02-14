@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import Users from './components/Users/Users';
 import Dialog from './components/Dialog/Dialog';
 

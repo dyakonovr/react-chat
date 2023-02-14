@@ -1,4 +1,4 @@
-import classes from './UserItem.module.css'
+import classes from './UserItem.module.scss'
 
 function UserItem() {
   return (

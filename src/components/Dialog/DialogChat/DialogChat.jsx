@@ -1,4 +1,4 @@
-import classes from './DialogChat.module.css'
+import classes from './DialogChat.module.scss'
 import DialogInput from './DialogInput/DialogInput';
 import DialogMessages from './DialogMessages/DialogMessages'
 
@@ -7,7 +7,6 @@ function DialogChat() {
     <div className={classes.wrapper}>
       <DialogMessages/>
       <DialogInput />
-      
     </div>
   );
 };

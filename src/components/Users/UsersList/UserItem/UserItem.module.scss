@@ -2,17 +2,17 @@
   display: flex;
   align-items: center;
   padding: 10px;
-}
 
-.item_active {
-  background-color: var(--color-secondary);
-  /* border-left: 1px solid var(--color-main); */
-}
+  &_active {
+    background-color: var(--color-secondary);
+    /* border-left: 1px solid var(--color-main); */
+  }
 
-/* .item_tg::after {
-  content: "";
-  background-image: url("@/src/assets/icon-inst.svg");
-} */
+  // &::after {
+  //   content: "";
+  //   background-image: url("@/src/assets/icon-inst.svg");
+  // }
+}
 
 .image {
   height: 100%;

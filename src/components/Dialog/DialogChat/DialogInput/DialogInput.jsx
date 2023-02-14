@@ -1,4 +1,4 @@
-import classes from './DialogInput.module.css'
+import classes from './DialogInput.module.scss'
 
 function DialogInput() {
   return (

@@ -1,5 +1,5 @@
-import SearchInput from '../../UI/SearchInput/SearchInput';
-import classes from './UsersHeader.module.css'
+import SearchInput from './SearchInput/SearchInput';
+import classes from './UsersHeader.module.scss'
 
 function UsersHeader() {
   return (

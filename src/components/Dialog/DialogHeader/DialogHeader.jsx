@@ -1,4 +1,4 @@
-import classes from './DialogHeader.module.css'
+import classes from './DialogHeader.module.scss'
 
 function DialogHeader() {
   return (
