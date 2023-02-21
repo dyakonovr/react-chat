@@ -19,7 +19,7 @@ function UsersList() {
   ]);
   return (
     <>
-      <SimpleBar style={{ maxHeight: 650 - 51 }} forceVisible="y">
+      <SimpleBar style={{ maxHeight: 610 - 51 }} forceVisible="y">
         <ul className={classes.list}>
           {users.map(user =>
             <UserItem key={user.id} userName={user.UserName} lastMsg={user.lastMsg} />
