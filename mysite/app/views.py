@@ -70,7 +70,7 @@ def signUp(request):
             form = SignUpForm(request.POST)
             if (form.is_valid()):
                 user = form.save(commit=False)
-                user.password = make_password('password')
+                user.set_password(user.password)
                 user.save()
                 auth_login(request, user)
                 createFolder(user.username)
