@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static "css/signUp.css" %}" />
+        <title>Sign up</title>
+    </head>
+    <body>
+        <div class="container">
+            <form class="form" method="post">
+                <h1 class="title">Sign up</h1>
+                {% csrf_token %}
+                {% for field in form %}
+                    {{ field }}
+                    {% for error in field.errors %}
+                        <span class="message-error"> {{ error }} </span>
+                    {% endfor %}
+                {% endfor %}
+                {% if form.non_field_errors %}
+                    {% for non_field_error in form.non_field_errors %}
+                        <span class="message-error"> {{ non_field_error }} </span>
+                    {% endfor %}
+                {% endif %}
+                <label for="confirm-valid" class="label-check">
+                    <input type="checkbox" id="confirm-valid" required> I've checked the correctness of the entered data
+                </label>
+                <label for="confirm-agreement" class="label-check">
+                    <input type="checkbox" id="confirm-agreement" required> I agree with the user agreement
+                </label>
+                <button class="form-button" type="submit">Sign up</button>
+            </form>
+        </div>
+    </body>
+</html>
