@@ -25,11 +25,11 @@ function Message({ messageObject }) {
 
     else if (media_type == "Doc") {
       additionalBlock = media_urls.map((url, i) => {
-        return <div key={i} href={url} className={classes.document_wrapper}>
+        return <a key={i} href={url} className={classes.document_wrapper} target="_blank">
           
           <div className={classes.document_icon} ><img src={iconDoc} alt="Icon"/></div>
           <strong className={classes.document_name}>Doc. name</strong>
-        </div>
+        </a>
       });
     }
 
