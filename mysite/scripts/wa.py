@@ -10,7 +10,7 @@ import pytz
 
 
 config = configparser.ConfigParser()
-config.read("config.ini")
+config.read("scripts/config.ini")
 
 
 id = str(config['WA']['id'])
