@@ -21,6 +21,10 @@
       margin: 0 10px 0 0;
       text-align: right;
     }
+
+    .stiker, .userImg {
+      justify-content: right;
+    }
   }
 
   &:not(:last-child) {
@@ -62,17 +66,41 @@
   margin: 0;
 }
 
+
 .userImg {
-  display: block;
-  max-width: 70%;
-}
-
-.stiker{
   display: flex;
-  justify-content: right;
+
+  img {
+    display: block;
+    max-width: 70%;
+  }
 }
 
-.stiker img{
+.stiker {
+  display: flex;
+}
+
+.stiker img {
   display: block;
   max-width: 30%;
+}
+
+.empty {
+  color: gray;
+}
+
+.document {
+  &_wrapper {
+    display: flex;
+  }
+
+  &_icon img {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  &_name {
+    margin: 0 0 0 5px;
+  }
 }

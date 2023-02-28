@@ -1,5 +1,6 @@
 import classes from './Message.module.scss'
 import generateDate from '../../../../../functions/generateDate';
+import iconDoc from "../../../../../assets/icon-doc.svg";
 
 function Message({ messageObject }) {
   console.log(messageObject);
@@ -7,23 +8,37 @@ function Message({ messageObject }) {
 
   // Функции
   function generateMessage(media_type, media_urls, message) {
+    let additionalBlock = '';
+
     console.log(media_type, media_urls, message);
-    if (media_type == "None")
-    {
-      return(
-        <div>{message}</div>
-        )
+    if (media_type == "None") additionalBlock = '';
+
+    else if (media_type == "Photo") {
+      additionalBlock = media_urls.map((url, i) => {
+        return <div key={i} className={classes.userImg}><img src={url} alt="PHOTO" /></div>
+      });
     }
-    else if (media_type == "Photo" || media_type == "Stiker"){
-      return(
-        <>
-          <div>{message}</div>
-            {
-              media_urls.map((url, i) => <div key={i} className={media_type == "Photo" ? classes.userImg : classes.stiker}><img src={url} alt="" /></div>)
-            }
-        </>
-      )
+
+    else if (media_type == "Stiker") {
+      additionalBlock = <div className={classes.stiker}><img src={media_urls[0]} alt="STIKER" /></div>
     }
+
+    else if (media_type == "Doc") {
+      additionalBlock = media_urls.map((url, i) => {
+        return <div key={i} href={url} className={classes.document_wrapper}>
+          
+          <div className={classes.document_icon} ><img src={iconDoc} alt="Icon"/></div>
+          <strong className={classes.document_name}>Doc. name</strong>
+        </div>
+      });
+    }
+
+    return (
+      <>
+        <div>{media_type == "None" && message.length === 0 ? <span className={classes.empty}>Пустое сообщение...</span> : message}</div>
+        {additionalBlock}
+      </>
+    )
   }
   // Функции END
 
