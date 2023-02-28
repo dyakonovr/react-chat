@@ -1,11 +1,10 @@
-import { combineReducers, configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import { chatAPI } from '../services/ChatService';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import usersReducer from './reducers/UsersSlice';
+import chatReducer from "./reducers/ChatSlice";
+import preloaderReducer from "./reducers/PreloaderSlice";
 
-const rootReducer = combineReducers({
-  [chatAPI.reducerPath]: chatAPI.reducer
-});
+const rootReducer = combineReducers({ usersReducer, chatReducer, preloaderReducer });
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(chatAPI.middleware),
 });

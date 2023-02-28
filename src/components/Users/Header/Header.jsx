@@ -1,7 +1,7 @@
 import SearchInput from './SearchInput/SearchInput';
-import classes from './UsersHeader.module.scss'
+import classes from './Header.module.scss'
 
-function UsersHeader() {
+function Header() {
   return (
     <div className={classes.wrapper}>
       <SearchInput />
@@ -9,4 +9,4 @@ function UsersHeader() {
   );
 };
 
-export default UsersHeader;
+export default Header;

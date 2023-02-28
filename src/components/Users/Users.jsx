@@ -1,12 +1,12 @@
-import UsersHeader from './UsersHeader/UsersHeader';
-import UsersList from './UsersList/UsersList';
+import Header from './Header/Header';
+import List from './List/List';
 import classes from './Users.module.scss';
 
 function Users() {
   return (
     <div className={classes.wrapper}>
-      <UsersHeader />
-      <UsersList />
+      <Header />
+      <List />
     </div>
   );
 };

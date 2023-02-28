@@ -1,6 +1,7 @@
 :root {
   --color-main: #3c3c42;
   --color-secondary: #2a2a2e;
+  --color-user-item-hover: #43434a;
   --color-btn: #7947ad;
   --color-white: #fff;
 
@@ -36,4 +37,25 @@ body {
 .simplebar-scrollbar::before {
   background-color: var(--color-scrollbar-thumb);
   width: var(--scrollbar-width);
+}
+
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 100%;
+  height: calc(100% - 51px - 50px);
+  background-color: var(--color-main);
+  opacity: 1;
+  visibility: visible;
+}
+
+.preloader_done {
+  opacity: 0;
+  visibility: hidden;
 }

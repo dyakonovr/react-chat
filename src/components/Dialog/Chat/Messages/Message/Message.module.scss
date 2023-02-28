@@ -28,6 +28,24 @@
   }
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px;
+}
+
+.nickname {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.date {
+  margin: 0 0 0 5px;
+  color: grey;
+  font-size: 14px;
+}
+
 .image img {
   width: 40px;
   height: 40px;
@@ -40,10 +58,11 @@
   flex-direction: column;
 }
 
-.nickname {
-  margin: 0 0 10px;
-}
-
 .content {
   margin: 0;
+}
+
+.userImg {
+  display: block;
+  max-width: 70%;
 }

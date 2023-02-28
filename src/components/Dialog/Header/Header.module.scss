@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  padding: 6px 10px 4px;
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: block;
+}
+
+.name {
+  margin: 0 0 0 10px;
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 700;
+  height: 100%;
+}
+
+.icon {
+  display: block;
+  min-width: 20px;
+  min-height: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  margin: 0 0 0 5px;
+}
