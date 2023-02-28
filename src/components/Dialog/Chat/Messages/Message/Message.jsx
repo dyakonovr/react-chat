@@ -8,6 +8,22 @@ function Message({ messageObject }) {
   // Функции
   function generateMessage(media_type, media_urls, message) {
     console.log(media_type, media_urls, message);
+    if (media_type == "None")
+    {
+      return(
+        <div>{message}</div>
+        )
+    }
+    else if (media_type == "Photo" || media_type == "Stiker"){
+      return(
+        <>
+          <div>{message}</div>
+            {
+              media_urls.map((url, i) => <div key={i} className={media_type == "Photo" ? classes.userImg : classes.stiker}><img src={url} alt="" /></div>)
+            }
+        </>
+      )
+    }
   }
   // Функции END
 
