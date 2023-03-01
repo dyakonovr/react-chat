@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import classes from './Input.module.scss'
+import classes from './Input.module.scss';
+import iconSend from "../../../../assets/icon-send.svg";
 
 function Input() {
   const [inputValue, setInputValue] = useState("")
@@ -13,7 +14,7 @@ function Input() {
         className={classes.input}
       />
       <button className={classes.btn}>
-        <img className={classes.img} src="src/assets/send.svg" alt="" />
+        <img className={classes.img} src={iconSend} alt="" />
       </button>
     </div>
   );
