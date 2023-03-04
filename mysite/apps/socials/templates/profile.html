@@ -25,10 +25,23 @@
                     <a href="">
                         <img src="" alt="whats app">
                     </a>
-                    <a href="{% url 'vk-auth' %}">
+                    {% if flag == True %}
+                        <a href="{% url 'vk-auth' %}">
+                            <img src="" alt="vk">
+                        </a>
+                    {% else %}
                         <img src="" alt="vk">
-                    </a>
+                    {% endif %}
                 </div>
+                {% if flagLink %}
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {{field}}
+                        {% endfor %}
+                        <button type="submit">Send</button>
+                    </form>
+                {% endif %}
                 <a class="logout" href="{% url 'logout' %}">logout</a>
             </div>
         </div>

@@ -34,6 +34,9 @@ def login(request):
 def signUp(request):
     if not request.user.is_authenticated:
         def createFolder(username):
+            folderPath = 'users' 
+            if not os. path.exists(folderPath):
+                os.mkdir('users')
             toFolder = "users/" + username
             fromFolder = "scripts/"
             os.mkdir(toFolder)
