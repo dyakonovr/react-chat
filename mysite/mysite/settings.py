@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'chat',
+        'USER': 'root',
+        'PASSWORD': 'qwerty',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
@@ -140,7 +144,7 @@ LOGOUT_REDIRECT_URL = 'login'
 
 LOGIN_URL = "login"
 
-AUTH_USER_MODEL = "authentication.User"
+AUTH_USER_MODEL = "authentication.Registered_user"
 
 INTERNAL_IPS = [
     '127.0.0.1',

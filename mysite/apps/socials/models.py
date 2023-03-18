@@ -1,7 +1,10 @@
 from django.db import models
-from ..authentication.models import User
+from apps.authentication.models import Registered_user
 
 
-class SocialsLinks(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    vk_token = models.CharField(max_length=500, unique=True, null=True)
+class Soc_vars(models.Model):
+    registered_id = models.OneToOneField(Registered_user, on_delete=models.CASCADE, primary_key=True)
+    vk_api_token = models.TextField(unique=True, null=True)
+    green_api_id = models.TextField(unique=True)
+    green_api_token = models.TextField(unique=True)
+    telegram_session_path = models.TextField(unique=True)

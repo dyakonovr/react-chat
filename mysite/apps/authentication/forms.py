@@ -1,6 +1,6 @@
 from django.forms import ModelForm, ValidationError
 from django import forms
-from .models import User
+from .models import Registered_user
 
 
 class LogInForm(forms.Form):
@@ -21,8 +21,8 @@ class SignUpForm(ModelForm):
     }
 
     class Meta:
-        model = User
-        fields = ('username', 'email', 'phoneNumber', 'password')
+        model = Registered_user
+        fields = ('username', 'email', 'phone', 'password')
         widgets = {
             "username": forms.TextInput(
                 attrs={
@@ -34,7 +34,7 @@ class SignUpForm(ModelForm):
                     "placeholder": "Email"
                 }
             ),
-            "phoneNumber": forms.TextInput(
+            "phone": forms.TextInput(
                 attrs={
                     "placeholder": "Phone number (with a country code) ",
                     "type": "tel",

@@ -2,7 +2,7 @@ from urllib import parse
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from .forms import VkLink
-from .models import SocialsLinks
+from .models import Soc_vars
 
 
 @login_required
@@ -51,7 +51,7 @@ def profile(request):
     else:
         form = VkLink()
 
-    if SocialsLinks.objects.filter(user_id=user_id).exists():
+    if Soc_vars.objects.filter(user_id=user_id).exists():
         flagLink = False
         flag = False
 
